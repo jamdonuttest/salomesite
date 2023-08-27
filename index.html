@@ -4,20 +4,46 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Salome Lawrence</title>
+    <title>Salomie Lawrence</title>
     <link rel="stylesheet" href="styles.css">
 </head>
 
 <body>
     <div class="container">
+        <h1 class="raised-title">Your Art Name</h1>
+        
+        <!-- Navigation Bar -->
         <div class="navigation">
             <a href="sold-art.html">Sold Art</a>
             <a href="for-sale.html">For Sale</a>
             <a href="/blog/index.html">Blog</a>
         </div>
-        <h1 class="raised-title">Your Art Name</h1>
+        
         <img src="/images/salomeportrait.jpg" alt="Your Portrait" class="artist-image">
+        
+        <!-- Description Textbox -->
+        <div class="description">
+            Hello im salomie, this is my site, the best artist in the whole wide carribean!
+        </div>
+        
+       
     </div>
+
+    <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                // Downwards scroll
+                document.querySelector(".navigation").style.top = "-50px"; // Hide navigation
+            } else {
+                // Upwards scroll
+                document.querySelector(".navigation").style.top = "0"; // Show navigation
+            }
+            lastScrollTop = currentScroll;
+        }, false);
+    </script>
 </body>
 
 </html>
