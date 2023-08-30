@@ -32,7 +32,7 @@ body {
 
 @media (max-width: 768px) { /* Adjust this breakpoint as needed */
     .dropdown-btn {
-        top: 60%; /* Adjust this percentage as needed */
+        top: 30%; /* Adjust this percentage as needed */
     }
 }
 
