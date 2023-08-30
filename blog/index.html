@@ -89,13 +89,16 @@
 </script>
 
 <script>
+let isNavOpen = false; // Menu is closed by default
+
 function toggleNav() {
     var nav = document.querySelector('.navigation');
-	nav.classList.toggle('show');
-    if (nav.style.display === 'block' || nav.style.display === '') {
+    if (isNavOpen) {
         nav.style.display = 'none';
+        isNavOpen = false; // Menu is now closed
     } else {
         nav.style.display = 'block';
+        isNavOpen = true; // Menu is now open
     }
 }
 </script>

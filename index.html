@@ -90,26 +90,21 @@ Artists Choice Award 2019- Grenada Arts Council.</p>
 </script>
 
 <script>
+let isNavOpen = false; // Menu is closed by default
+
 function toggleNav() {
     var nav = document.querySelector('.navigation');
-    if (nav.style.display === 'block' || nav.style.display === '') {
+    if (isNavOpen) {
         nav.style.display = 'none';
+        isNavOpen = false; // Menu is now closed
     } else {
         nav.style.display = 'block';
+        isNavOpen = true; // Menu is now open
     }
 }
 </script>
 
-<script>
-function toggleMobileNav() {
-    var navContent = document.querySelector('.mobile-nav-content');
-    if (navContent.style.display === 'block') {
-        navContent.style.display = 'none';
-    } else {
-        navContent.style.display = 'block';
-    }
-}
-</script>
+
 
 </body>
 
