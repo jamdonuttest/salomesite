@@ -10,24 +10,59 @@
 
 <body>
     <div class="container">
-        <h1 class="raised-title">Salomie Lawrence</h1>
+        <h1>Salomie Lawrence</h1>
         
-        <!-- Navigation Bar -->
+        <!-- Mobile Navigation Bar -->
+        <div class="mobile-nav">
+            <button id="nav-toggle" onclick="toggleNav()">Menu</button>
+            <div class="mobile-nav-content">
+                <a href="sold-art.html">Sold Art</a>
+                <a href="for-sale.html">For Sale</a>
+                <a href="blog/index.html">Blog</a>
+            </div>
+        </div>
+
+        <!-- Desktop Navigation Bar -->
         <div class="navigation">
             <a href="sold-art.html">Sold Art</a>
             <a href="for-sale.html">For Sale</a>
             <a href="blog/index.html">Blog</a>
         </div>
         
-        <img src="images/salomeportrait.jpg" alt="Your Portrait" class="artist-image">
-        
-        <!-- Description Textbox -->
-        <div class="description">
-            Hello im salomie, this is my site, the best artist in the whole wide carribean!
-        </div>
-        
+          <div class="image-container">
+            <img src="images/salomeportrait.jpg" alt="Your Portrait" class="artist-image">
+            <!-- Dropdown Menu -->
+            <div class="dropdown">
+                <button class="dropdown-btn" onclick="toggleDropdown()">About Salomie</button>
+                <div class="dropdown-content" id="about-salomie-content">
+        <p>Salomie Lawrence is a self-taught, award-winning artist who lives and works in Grenada, where
+she uses her work to ignite positive change on issues ranging from social injustice, generational
+trauma, and the environment.</p>
+
+<p>Drawing inspiration from the ethereal concept of ancestry and the rich tapestry of cultural
+narratives that shape our collective human history Salomie Lawrence creates emotionally
+evocative compositions that transcend traditional boundaries to invite the viewer on a journey
+of exploration. Salomie is best known for her low relief mixed media paintings and mosaic work
+which often uses found objects and recycled tesserae. As an emerging artist she continues to
+push the boundaries of her practice exploring new ideas, techniques, and materials to further
+enrich her artistic language.</p>
+
+<p>Lawrence has exhibited internationally and most notably in the Grenada Pavilion at The World
+Expo-Dubai 2020 and at the 5 th &amp; 6 th Grenada Contemporary-Arthouse473, Grenada (2019 &amp;
+2022) and more recently at Unleash Grenada, 2023 where her work was noted for its
+craftsmanship and evocative storytelling. Her ability to evoke emotion and engage viewers in a
+dialogue about identity and heritage has garnered a following.</p>
+
+<p>She actively engages in community programs and workshops with aspiring artists and
+enthusiasts and her desire to foster a deeper appreciation for the arts is reflected in her
+commitment to education and mentorship. Salome’s work and innovative approach has
+captured attention and earned her the Emerging Artist Award 2018- Grenada Arts Council and
+Artists Choice Award 2019- Grenada Arts Council.</p>
        
+        </div>
     </div>
+</div>
+        
 
     <script>
         let lastScrollTop = 0;
@@ -44,6 +79,20 @@
             lastScrollTop = currentScroll;
         }, false);
     </script>
+	
+	<script>
+    function toggleDropdown() {
+    var dropdownContent = document.querySelector('#about-salomie-content');
+    
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+        dropdownContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>
+
 </body>
 
 </html>

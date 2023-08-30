@@ -1,8 +1,43 @@
 body {
     font-family: 'Arial', sans-serif;
-    background-color: #f4f4f4;
+    background-color: #C0C2C9; /* Slate */
     margin: 0;
     padding: 0;
+    color: #36454F; /* Charcoal for text */
+}
+
+/* Hide by default */
+.mobile-nav-content {
+    display: none;
+    flex-direction: column;
+    background-color: #C0C0C0; /* Silver */
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+    padding: 10px;
+    position: absolute;
+    top: 40px;
+    right: 10px;
+    z-index: 5;
+}
+
+#nav-toggle {
+    background-color: #C0C0C0; /* Silver */
+    color: #36454F; /* Charcoal for text */
+    border: none;
+    border-radius: 8px;
+    padding: 10px 15px;
+    cursor: pointer;
+}
+
+/* Mobile view media query */
+@media (min-width: 768px) {
+    .mobile-nav {
+        display: none;
+    }
+
+    .navigation {
+        display: block;
+    }
 }
 
 .container {
@@ -10,40 +45,99 @@ body {
     flex-direction: column;
     align-items: center;
     width: 100%;
-    position: relative;
 }
 
 .navigation {
     position: absolute;
-    top: 10px;
+    top: 70px;
     right: 10px;
+    background-color: #C0C0C0; /* Silver for the box background */
+    border-radius: 8px; /* Rounded corners for the box */
+    padding: 10px; /* Padding to give space inside the box */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.15); /* A subtle shadow for depth */
 }
 
 .navigation a {
-    color: #333;
+    display: inline-block;
+    color: #36454F; /* Charcoal for links */
     text-decoration: none;
     padding: 5px 15px;
-    margin: 0 5px;
+    margin: 5px;
     border-radius: 5px;
     transition: background-color 0.3s;
 }
 
 .navigation a:hover {
-    background-color: #ddd;
+    background-color: #808080; /* Gray for hover effects */
+    color: #C0C2C9; /* Slate for hover text */
 }
 
 .raised-title {
     font-size: 2.5em;
-    background-color: #ffffff;
     padding: 10px 30px;
     border-radius: 8px;
-    box-shadow: 3px 3px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
+    box-shadow: 3px 3px 10px rgba(54, 69, 79, 0.1); /* Charcoal for shadows */
+    margin-bottom: 40px;
+    color: #C0C0C0; /* Silver for title text */
 }
 
 .artist-image {
-    max-width: 100%;
+    width: 100%;
     height: auto;
+	max-width: 100%;
+	display: block;
     border-radius: 8px;
-    box-shadow: 2px 2px 10px rgba(0, 0, 0, 0.1);
+    box-shadow: 2px 2px 10px rgba(54, 69, 79, 0.1); /* Charcoal for shadows */
+    margin: 40px 0;
+	
+}
+
+.dropdown {
+    
+    display: inline-block;
+    width: 100%;  /* Ensures the dropdown takes full width */
+}
+
+.dropdown-content {
+    display: none;
+    position: absolute;
+    background-color: #E9EAEC; /* Pewter */
+    box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+    z-index: 2;
+    border-radius: 8px;
+    padding: 15px;
+    width: 90%; /* Adjusted to 90% of the container width */
+    left: 5%;  /* Centering it with respect to the container */
+    font-size: 1.5em;
+    top: 100%; /* Ensure it displays below the image/button */
+}
+
+.dropdown-btn {
+    position: absolute;
+    top: 50%;  /* This, combined with 'transform', will center the button vertically */
+    left: 50%; /* This, combined with 'transform', will center the button horizontally */
+    transform: translate(-50%, -50%); /* This ensures that the button is truly centered, based on its own width and height */
+    
+    background-color: transparent; /* Transparent background */
+    color: #36454F; /* Charcoal for text */
+    border: 3px solid #36454F; /* Medium-thickness Charcoal border */
+    cursor: pointer;
+    border-radius: 8px;
+    padding: 10px 16px;
+    font-size: 1.5em;
+    font-weight: bold; /* Bold text */
+    opacity: 0.9;
+    z-index: 5; /* Z-index should be higher than the image's so the button appears on top */
+    width: auto; /* Remove the full viewport width */
+    transition: 0.3s; /* For smooth hover effect */
+}
+
+
+.image-container {
+    position: relative;
+    width: 100%; /* Take full width of its container */
+	display: block;
+	margin: 0 auto;
+	z-index: 1;
+	
 }
