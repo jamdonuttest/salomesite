@@ -27,21 +27,35 @@ body {
     border-radius: 8px;
     padding: 10px 15px;
     cursor: pointer;
+	
 }
 
 /* Mobile view media query */
 @media (min-width: 768px) {
-    .mobile-nav {
+ .navigation {
         display: none;
+        position: absolute;
+        top: 60px; /* Adjust according to your needs */
+        left: 5%; 
+        background-color: #C0C0C0;
+        border-radius: 8px;
+        box-shadow: 0 0 10px rgba(0, 0, 0, 0.15);
+        width: 90%;
     }
 
-    .navigation {
+    .navigation a {
         display: block;
+        margin: 5px 0;
+        text-align: center; /* Center the links */
     }
-	
-	.dropdown-btn {
-		margin-left: 20px;
-		margin-top: 10px;
+
+    #nav-toggle {
+        background-color: #C0C0C0;
+        border: none;
+        padding: 10px 15px;
+        cursor: pointer;
+        display: inline-block; /* Position next to the name */
+        margin-left: 20px; /* Gap between the name and the button */
     }
 }
 

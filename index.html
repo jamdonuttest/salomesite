@@ -13,12 +13,15 @@
         <h1>Salomie Lawrence</h1>
        
 
-        <!-- Desktop Navigation Bar -->
-        <div class="navigation">
-            <a href="sold-art.html">Sold Art</a>
-            <a href="for-sale.html">For Sale</a>
-            <a href="blog/index.html">Blog</a>
-        </div>
+         <!-- Navigation Bar -->
+    <button id="nav-toggle" onclick="toggleNav()">Menu</button>
+    <div class="navigation">
+        <a href="sold-art.html">Sold Art</a>
+        <a href="for-sale.html">For Sale</a>
+        <a href="blog/index.html">Blog</a>
+    </div>
+    <!-- ... rest of your code ... -->
+</div>
         
           <div class="image-container">
             <img src="images/salomeportrait.jpg" alt="Your Portrait" class="artist-image">
@@ -48,7 +51,7 @@ dialogue about identity and heritage has garnered a following.</p>
 
 <p>She actively engages in community programs and workshops with aspiring artists and
 enthusiasts and her desire to foster a deeper appreciation for the arts is reflected in her
-commitment to education and mentorship. Salome’s work and innovative approach has
+commitment to education and mentorship. Salomie’s work and innovative approach has
 captured attention and earned her the Emerging Artist Award 2018- Grenada Arts Council and
 Artists Choice Award 2019- Grenada Arts Council.</p>
        
@@ -82,6 +85,17 @@ Artists Choice Award 2019- Grenada Arts Council.</p>
     } else {
         dropdownContent.style.display = 'block';
         dropdownContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>
+
+<script>
+function toggleNav() {
+    var nav = document.querySelector('.navigation');
+    if (nav.style.display === 'block' || nav.style.display === '') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
     }
 }
 </script>

@@ -28,7 +28,8 @@
         <div class="navigation">
             <a href="sold-art.html">Sold Art</a>
             <a href="for-sale.html">For Sale</a>
-            <a href="blog/index.html">Blog</a>
+            <a href="index.html">Blog</a>
+			<a href "../index.html">Home</a>
         </div>
         
         <img src="../images/salomeportrait.jpg" alt="My Portrait" class="artist-image">
@@ -66,6 +67,46 @@
             </div>
         </div>
     </div>
+	
+	 <script>
+        let lastScrollTop = 0;
+
+        window.addEventListener("scroll", function() {
+            let currentScroll = window.pageYOffset || document.documentElement.scrollTop;
+            if (currentScroll > lastScrollTop) {
+                // Downwards scroll
+                document.querySelector(".navigation").style.top = "-50px"; // Hide navigation
+            } else {
+                // Upwards scroll
+                document.querySelector(".navigation").style.top = "0"; // Show navigation
+            }
+            lastScrollTop = currentScroll;
+        }, false);
+    </script>
+	
+	<script>
+    function toggleDropdown() {
+    var dropdownContent = document.querySelector('#about-salomie-content');
+    
+    if (dropdownContent.style.display === 'block') {
+        dropdownContent.style.display = 'none';
+    } else {
+        dropdownContent.style.display = 'block';
+        dropdownContent.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    }
+}
+</script>
+
+<script>
+function toggleNav() {
+    var nav = document.querySelector('.navigation');
+    if (nav.style.display === 'block' || nav.style.display === '') {
+        nav.style.display = 'none';
+    } else {
+        nav.style.display = 'block';
+    }
+}
+</script>
 </body>
 
 </html>
