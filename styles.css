@@ -30,7 +30,11 @@ body {
 	
 }
 
-
+@media (max-width: 768px) { /* Adjust this breakpoint as needed */
+    .dropdown-btn {
+        top: 60%; /* Adjust this percentage as needed */
+    }
+}
 
 .container {
     display: flex;
@@ -113,7 +117,7 @@ body {
 
 .dropdown-btn {
     position: absolute;
-    top: 80%;  /* This, combined with 'transform', will center the button vertically */
+    top: 75%;  /* This, combined with 'transform', will center the button vertically */
     left: 50%; /* This, combined with 'transform', will center the button horizontally */
     transform: translate(-50%, -50%); /* This ensures that the button is truly centered, based on its own width and height */
     
